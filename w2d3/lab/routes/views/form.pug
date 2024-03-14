@@ -1,0 +1,26 @@
+extends layout 
+
+block content
+p No registrations yet :(
+if errors 
+ul
+for error in errors 
+li= error.msg
+
+
+form(action="." method="POST")
+label(for="name") Name: 
+input(
+    type="text"
+    id="name"
+    name="name"
+)
+
+labe(for="email") Email: 
+input(
+    type="email"
+    id="email"
+    name="email"
+)
+
+input(type="submit" value="Submit")
