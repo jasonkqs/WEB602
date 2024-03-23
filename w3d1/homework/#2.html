@@ -1,0 +1,37 @@
+<html>
+
+<head> </head>
+
+<body>
+    <script src="http://riclok3.freehostia.com/westcliff/data.js"></script>
+    <div id="demo"></div>
+    <script>
+        const allCountries = [
+            ...countries1,
+            ...countries2,
+            ...countries3,
+            ...countries4,
+            ...countries5,
+            ...countries6,
+            ...countries7,
+            ...countries8,
+            ...countries9
+        ];
+
+        const asianCountries = allCountries.filter(
+            (country) => country.continent === "Asia"
+        );
+
+        const alphabet = "I";
+
+        const index = asianCountries.findIndex((country) =>
+            country.country.startsWith(alphabet)
+        );
+
+        // Output
+        document.getElementById("demo").innerHTML = index; // This will output the array position
+
+    </script>
+</body>
+
+</html>

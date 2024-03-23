@@ -1,0 +1,32 @@
+<html>
+
+<head> </head>
+
+<body>
+    <script src="http://riclok3.freehostia.com/westcliff/data.js"></script>
+    <script>
+        // Step 1: Combine all countries
+        const allCountries = [
+            ...countries1,
+            ...countries2,
+            ...countries3,
+            ...countries4,
+            ...countries5,
+            ...countries6,
+            ...countries7,
+            ...countries8,
+            ...countries9
+        ];
+
+        // Step 2: Search for countries beginning with a specific alphabet
+        const startingLetter = "A";
+        const countriesStartingWithLetter = allCountries
+            .filter((country) => country.country.startsWith(startingLetter))
+            .map((country) => country.country);
+
+        // Output to HTML
+        document.write(countriesStartingWithLetter.join(", "));
+    </script>
+</body>
+
+</html>

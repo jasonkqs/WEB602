@@ -1,0 +1,29 @@
+<html>
+
+<head> </head>
+
+<body>
+    <script src="http://riclok3.freehostia.com/westcliff/data.js"></script>
+    <script>
+        const allcountries = [
+            ...countries1,
+            ...countries2,
+            ...countries3,
+            ...countries4,
+            ...countries5,
+            ...countries6,
+            ...countries7,
+            ...countries8,
+            ...countries9,
+        ];
+
+        const asia = allcountries.filter(
+            (country) => country.continent === "Asia"
+        );
+        asia.map((as) => {
+            document.write(as.country + "<br>");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<html>
+
+<head> </head>
+
+<body>
+    <script src="http://riclok3.freehostia.com/westcliff/data.js"></script>
+    <h3>Search Countries in <span id="cont"></span></h3>
+    <span>Enter an alphabet in uppercase</span><br>
+    <input type="text" id="alphabet">
+    <button id="btn">Search</button>
+    <script>
+        // Assuming allCountries is an array combining all country data
+        const continentName = 'North America'; // Adjust based on requirement
+
+        const allCountries = [
+            ...countries1,
+            ...countries2,
+            ...countries3,
+            ...countries4,
+            ...countries5,
+            ...countries6,
+            ...countries7,
+            ...countries8,
+            ...countries9
+        ];
+
+        class ContinentCountries {
+            constructor(continentName) {
+                this.continentName = continentName;
+                this.countries = allCountries.filter(country => country.continent === continentName);
+            }
+        }
+
+        class SearchCountries extends ContinentCountries {
+            constructor(continentName, searchLetter) {
+                super(continentName);
+                this.searchLetter = searchLetter;
+            }
+            search() {
+                return this.countries.filter(country => country.country.startsWith(this.searchLetter)).map(country => country.country);
+            }
+        }
+
+        function startSearch() {
+            const inputLetter = document.getElementById("alphabet").value;
+            const searcher = new SearchCountries(continentName, inputLetter);
+            const result = searcher.search();
+            alert(result.join(', ')); // Displaying result in an alert for simplicity
+        }
+
+        let mybtn = document.getElementById("btn");
+        mybtn.addEventListener("click", startSearch);
+
+        document.getElementById("cont").innerHTML = continentName;
+
+    </script>
+</body>
+
+</html>
