@@ -1,0 +1,46 @@
+/* Variables */
+@import "colors.scss";
+@import "nav.scss";
+
+/* Nest Main */
+main {
+  width: 1350px;
+  min-height: 535px;
+  font-family: $font-style1;
+  background-color: $color8;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+
+  .section {
+    padding-left: 20px;
+  }
+
+  #intro-text {
+    flex-basis: 50%;
+    padding: 20px;
+    align-items: center;
+    background-color: $color4;
+
+    span {
+      font-family: $font-style2;
+    }
+  }
+
+  #intro-image {
+    flex-basis: 50%;
+    background-color: $color4;
+  }
+
+  #intro-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+body {
+  background-color: $color1;
+}
+
+// Mixin or Extend for button

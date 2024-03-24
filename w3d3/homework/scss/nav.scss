@@ -1,0 +1,12 @@
+/* Nest Nav */
+@import "colors.scss";
+
+nav {
+    color: $color8;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+}
