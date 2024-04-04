@@ -1,0 +1,65 @@
+.header{
+  height: 150px;
+  background:linear-gradient(
+    90deg,
+    rgb(78, 139, 189),
+    rgba(58, 138, 154, 0.696),
+    rgba(45, 163, 214, 0.782),
+    rgba(69, 134, 167, 0.962),
+    rgb(60, 90, 110),
+    rgb(58, 96, 115)
+); 
+margin-bottom: 10px;
+text-align: center;
+color: white;
+}
+h3{
+  font-weight: bolder;
+  text-align: center;
+  color: black;
+}
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 620px; /* Adjust as needed */
+}
+
+.image-item {
+  flex: 0 0 calc(25% - 10px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures uniform image size */
+  margin-bottom: 0;
+}
+.image-item h3,
+.image-item p {
+  margin: 0; /* Remove all margins */
+}
+
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* Aligns button at the bottom */
+}
+
+ button {
+   /* Adds space between image and button */
+   margin: 0;
+  color: black;
+  background-color: transparent;
+  border: 2px solid black;
+}
