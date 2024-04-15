@@ -1,0 +1,24 @@
+//- template for all pages
+doctype html
+html 
+  head 
+    title= `${title}`
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(rel='stylesheet', href='/css/form.css')
+    link(rel='stylesheet', href='/css/styles.css')
+
+  body
+
+//- this header will be used for all pages
+header
+  nav
+    ul
+      li
+        a(href='/') Home
+      li |
+      li
+        a(href='/blog') Blog
+
+  a.register-button(href='/register') Register
+
+block content
